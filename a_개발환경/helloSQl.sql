@@ -1,6 +1,6 @@
 SHOW DATABASES;
 
--- MySQL Workbech 환경 설정
+-- MySQL Workbench 환경 설정 
 
 -- 1. 주석
 -- 주석 단축키) ctrl + / (command + /)
@@ -10,14 +10,14 @@ SHOW DATABASES;
 -- # 샾 기호 1개를 사용
 
 # 안녕하세요
-# 만나서 
-#반갑습니다 :)
+# 만나서
+# 반갑습니다 :)
 
 -- 1-2. 여러 줄 주석
 /*
 슬래시 2개 사이에 별 2개를 사용
 >> 어떤 문장이나 여러 줄을 작성해도 모두 주석으로 인정
-*/ 
+*/
 
 # 2. 글자 크기 변경
 # ctrl + 마우스 휠 위 / 아래
@@ -25,11 +25,10 @@ SHOW DATABASES;
 
 # 3. sql 명령어 세팅 (대문자, 소문자)
 # 대소문자 구분 X
-# SQL 명령어는 관례적으로 대문자로 작성하는 것이 일반적
-# Edit > Format > UPCASE (대문자) / lowercase (소문자) keywords 선택alter
+# SQL 명령어는 관례적으로 대문자로 작성하는 것이 일반적 
+# Edit > Format > UPCASE (대문자) / lowercase (소문자) keywords 선택
 
-# 4. sql 자동 줄바꿈(Word Wrap)
-#
+# 4. sql 자동 줄바꿈(Word Wrap) 
 
 # 5. 다크 모드 설정
 
@@ -42,5 +41,4 @@ SHOW DATABASES;
 -- 마우스로 드래그 한 영역의 쿼리문만을 실행: ctrl + shift + enter
 
 # 새 SQL 에디터 열기(새로운 파일 생성): ctrl + t
-# SQL 정령: ctrl + b
-
+# SQL 정렬: ctrl + b
