@@ -45,5 +45,3 @@ values
 	('orange', '주황'),
 	('yellow', '노랑'),
 	('purple', '보라');
-    
-select * from rainbow;

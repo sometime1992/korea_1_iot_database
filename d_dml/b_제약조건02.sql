@@ -25,7 +25,6 @@ values (2, '홍동현', 28);
 insert into `employees`
 values (3, null, 30);
 
-select * from `employees`;
 /*
 	5. not null 제약조건
     : 특정 열에 null 값을 허용하지 않는다는 것을 의미
@@ -49,7 +48,6 @@ values (1, '성찬영', 'qwe123');
     : 테이블의 열에 값이 명시적으로 제공되지 않는 경우 사용되는 기본값
     : 선택적인 필드에 대해 데이터 입력을 단순화하여 데이터의 무결성을 유지
 */
-select * from `contacts`;
 
 create table `inquiry` (
 	order_id int primary key,
@@ -59,8 +57,6 @@ create table `inquiry` (
     quntity int default 1 -- 기본 수량이 1
 );
 
-desc `inquiry`;
-
 insert into `inquiry`
 values (1, '노트북', 3);
 
@@ -68,5 +64,3 @@ insert into `inquiry` (order_id, product_name)
 values (2, '스마트폰');
 
 select * from `inquiry`;
-
-drop database `example`;

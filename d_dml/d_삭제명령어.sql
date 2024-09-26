@@ -20,8 +20,6 @@ create table `big1` (select * from `world`.`city`, `sakila`.`country`);
 create table `big2` (select * from `world`.`city`, `sakila`.`country`);
 create table `big3` (select * from `world`.`city`, `sakila`.`country`);
 
-
-
 delete from big1; -- 2.266초 (가장 느림)
 select * from big1; -- 테이블 형식은 남아있음
 
@@ -31,7 +29,7 @@ drop table big2; -- 0.031초 (가장 빠름)
 truncate table big3; -- 0.031초
 select * from big3; -- 테이블 형식은 남아있음
  
-drop database `company`;
+
 
 
 

@@ -67,8 +67,6 @@ value
 -- insert into `Students`
 -- value (1, '김다혜', 'C전공'); # Error(기본 키 충돌)
 
-# select * from `Students`;
-
 # 제약조건에 대한 수정 (alter)
 # 1) 제약조건 삭제
 alter table `Students`
@@ -119,8 +117,6 @@ create table `orders` (
 insert into `members`
 value (1, '황상기');
 
-# desc `orders`;
-
 -- 유효한 고객 참조 시도
 insert into `orders`
 value (1, '2024-09-23', 1);
@@ -152,7 +148,6 @@ DESCRIBE `members`;
 /*
 	3. UNIQUE
     : 특정 열에 대해 모든 값이 고유해야 함을 보장
-    : 이메일 주소나 사용자 이름처럼 고유해야 하는 데이터에 사용
     : 한 테이블 내에서 여러 개 지정 가능 (각각 다른 컬럼에 독립적으로 적용)
     : Null값 허용
 	
@@ -165,12 +160,7 @@ create table `users` (
     user_email varchar(100) unique
 );
 
-desc `users`;
-
 insert into `users`
 values
 	(1, '박영준', 'qwe123'),
 	(2, '박영준', 'qwe124');
-    
-# desc `users`;
-select * from `users`;

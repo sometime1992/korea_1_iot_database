@@ -149,6 +149,6 @@ create table employees (
 
 insert into employees
 values (true);
-  
+
 select * from employees;
 # true의 값이 1로 변환되어 저장됨

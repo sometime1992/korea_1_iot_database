@@ -47,7 +47,6 @@ values ('최윤성', '전공 B', 28);
 create table `example02` (
 	-- 컬럼명 데이터타입 PRIMARY KEY auto_increment
     id int auto_increment primary key,
-    # INT 타입의 최대값 2,147,483,647까지 자동 생성 / 초과시 Error
     name varchar(100)
 );
 
@@ -81,7 +80,7 @@ create table `example03` (
 
 insert into `example03`
 select * from `example02`;
--- >> 데이터를 받을 테이블과 전달할 테이블의 컬럼 비교가 필수(수가 같아야함)!
+-- >> 데이터를 받을 테이블과 전달할 테이블의 컬럼 비교가 필수!
 
 select * from `example03`;
 
@@ -101,7 +100,6 @@ select * from `example02`;
 
 update `example02`
 set name='선하영';
-# safe update mode가 설정 되어있으면 실행되지가 않는다.
 
 select * from `example03`;
 
@@ -140,5 +138,3 @@ select * from example02;
 
 delete from example02
 where name='선하영';
-
-drop database `company`;
