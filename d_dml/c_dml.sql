@@ -31,10 +31,12 @@ create table `example01` (
 insert into `example01`	
 values ('서호영', 23, '전공 A');
 
+
 # 2) 컬럼명 지정 O
 insert into `example01`	(name, major, age)
 values ('최윤성', '전공 B', 28);
-
+select *
+from `example01`;
 # cf) 데이터 삽입 시 데이터 값 입력을 하지 X 경우
 # 1. Null 허용 - 자동 null값 지정
 # 2. NOT NULL 지정 - 오류!
@@ -50,6 +52,7 @@ create table `example02` (
     name varchar(100)
 );
 
+desc `example02`;
 insert into `example02`
 values 
 	(null, '박찬우'),
@@ -99,12 +102,15 @@ select * from `example03`;
 select * from `example02`;
 
 update `example02`
-set name='선하영';
+set name='선하영'; -- Error: safe update mode
 
 select * from `example03`;
 
 -- safe update mode를 해제하는 코드
 set sql_safe_updates=0;
+
+# WHERE 절 필수: UPDATE나 DELETE 쿼리를 실행할 때 WHERE 조건이 없으면 에러가 발생합니다.
+# 조건 없이 데이터 변경 방지: 실수로 모든 레코드를 업데이트하거나 삭제하는 것을 방지합니다.
 
 -- safe update mode를 설정하는 코드
 set sql_safe_updates=1;
@@ -138,3 +144,4 @@ select * from example02;
 
 delete from example02
 where name='선하영';
+select * from example02;

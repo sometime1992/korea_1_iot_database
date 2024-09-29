@@ -13,7 +13,9 @@ limit 2 offset 2; -- 첫 행의 시작 번호는 0
 # select * from `members` limit 2, 2; -- offset 키워드는 생략 후 콤마 사용 가능
 
 # 포인트(points)가 가장 높은 상위 3명의 회원 조회 - limit
-select * from `members` order by points desc limit 3;
+select * 
+from `members` 
+order by points desc limit 3;
 
 # 서로 다른 등급(grade) 목록 조회 - distinct
 select distinct grade from `members`;

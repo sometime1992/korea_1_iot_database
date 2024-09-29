@@ -18,7 +18,7 @@
 # 1. 데이터베이스 생성
 # 야구 팀 관리 데이터를 저장하는 데이터베이스
 # : baseball_league;
-CREATE DATABASE baseball_league;
+create database baseball_league;
 
 # 2. 데이터베이스 선택
 use baseball_league;
