@@ -5,7 +5,7 @@
 ### DML (data manipulation language)
 # : 데이터 관리 언어 
 # >> 데이터를 삽입, 조회, 수정, 삭제 기능 (CRUD)
-
+drop database if exists `company`;
 create database `company`;
 use `company`;
 

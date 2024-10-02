@@ -20,6 +20,8 @@ create table `big1` (select * from `world`.`city`, `sakila`.`country`);
 create table `big2` (select * from `world`.`city`, `sakila`.`country`);
 create table `big3` (select * from `world`.`city`, `sakila`.`country`);
 
+set sql_safe_updates=0;
+
 delete from big1; -- 2.266초 (가장 느림)
 select * from big1; -- 테이블 형식은 남아있음
 

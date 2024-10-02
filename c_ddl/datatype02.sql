@@ -17,11 +17,15 @@
     : 날짜와 시간을 저장 / YYYY-MM-DD HH:MM:SS 형식
     EX) 구매 일자, 가입 일자 등
 */
-
+drop table if exists events;
 create table events (
 	event_name VARCHAR(100),
     event_date DATE
 );
+-- SELECT @@datadir;
+-- SELECT TABLE_SCHEMA
+-- FROM information_schema.tables
+-- WHERE TABLE_NAME = 'events';
 
 INSERT INTO events
 VALUES ('Birthday', '2024-03-14');
@@ -33,15 +37,22 @@ select * from events;
     : 사전에 정의된 값의 집합 중 하나의 값을 저장
     >> 제한된 값 목록 중에서 선택 
 */
-
+drop table if exists rainbow;
 create table rainbow (
 	color enum('red', 'orange', 'yellow', 'purple'),
     descriptions varchar(100)
 );
 
+-- SELECT TABLE_SCHEMA
+-- FROM information_schema.tables
+-- WHERE TABLE_NAME = 'rainbow';
+
+-- enum으로 지정한 값은 다른 값이 저장되게되면 오류가 난다.
 insert into rainbow
 values 
 	('red', '빨강'),
 	('orange', '주황'),
 	('yellow', '노랑'),
 	('purple', '보라');
+
+select * from rainbow;

@@ -6,6 +6,7 @@
     : 테이블의 열에 대해 특정 조건을 설정
       , 조건을 만족하지 않는 경우 입력을 막음
 */
+use example;
 create table employees (
 	id int primary key,
     name varchar(100),
@@ -15,6 +16,9 @@ create table employees (
     # 조건식의 경우 다양한 연산자 사용
     check (age >= 20)
 );
+-- SELECT TABLE_SCHEMA
+-- FROM information_schema.tables
+-- WHERE TABLE_NAME = 'employees';
 
 insert into `employees`
 values (1, '이기석', 28);

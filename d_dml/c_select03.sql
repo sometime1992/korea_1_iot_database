@@ -4,7 +4,7 @@ use `korea_db`;
 # select A from B where C;
 
 /*
-	order by: 정령
+	order by: 정렬
     limit: 결과 개수의 제한
     distinct: 중복된 데이터를 제거
     group by: 지정한 열 데이터들 중 같은 데이터끼리 묶어서 추출
@@ -37,7 +37,7 @@ order by
 # limit 행수 (offset 시작행)
 # : 시작하는 행으로부터의 개수 제한
 # >> 생략할 경우 기본값 0
-
+-- select * from members;
 select * from members
 limit 5 offset 3; -- 첫 번쨰 행의 경우 offset 0번
 
